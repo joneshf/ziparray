@@ -17,5 +17,9 @@
     "fantasyland"
   ],
   "author": "Hardy Jones <jones3.hardy@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/joneshf/ziparray.git"
+  }
 }
