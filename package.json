@@ -1,0 +1,21 @@
+{
+  "name": "ziparray",
+  "version": "1.0.0",
+  "description": "Data type encoding alternative Apply effects for Array",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "zip",
+    "ziparray",
+    "ziplist",
+    "apply",
+    "applicative",
+    "fantasy",
+    "fantasy-land",
+    "fantasyland"
+  ],
+  "author": "Hardy Jones <jones3.hardy@gmail.com>",
+  "license": "MIT"
+}
