@@ -1,6 +1,6 @@
 {
   "name": "ziparray",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Data type encoding alternative Apply effects for Array",
   "main": "index.js",
   "scripts": {
