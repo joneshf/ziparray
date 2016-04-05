@@ -4,7 +4,7 @@
   "description": "Data type encoding alternative Apply effects for Array",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test.js"
   },
   "keywords": [
     "zip",
@@ -19,7 +19,12 @@
   "author": "Hardy Jones <jones3.hardy@gmail.com>",
   "license": "MIT",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/joneshf/ziparray.git"
+    "type": "git",
+    "url": "https://github.com/joneshf/ziparray.git"
+  },
+  "devDependencies": {
+    "jsverify": "^0.7.1",
+    "mocha": "^2.4.5",
+    "ramda": "^0.20.1"
   }
 }
