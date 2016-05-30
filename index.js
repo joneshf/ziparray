@@ -1,7 +1,7 @@
 'use strict';
 
 const ZipArray = xs => ({
-  map: f => ZipArray(xs.map(f)),
+  map: f => ZipArray(xs.map(x => f(x))),
   ap: ys => {
     const zs = ys.runZipArray;
     let result = [];

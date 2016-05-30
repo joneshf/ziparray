@@ -15,6 +15,14 @@ describe('ZipArray', () => {
     jsv.property('identity law', 'ZipArray unit', env, xs =>
       R.equals(xs.runZipArray, xs.map(x => x).runZipArray)
     );
+
+    jsv.property('composition law', 'ZipArray nat', 'nat', env, (xs, x) => {
+      const f = R.curry((a, b) => a + b);
+      const left = xs.map(y => f(x)(y)).runZipArray;
+      const right = xs.map(f).map(f => f(x)).runZipArray;
+
+      return R.equals(left, right);
+    });
   });
 
   describe('#ap', () => {
