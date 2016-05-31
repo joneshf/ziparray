@@ -5,7 +5,11 @@ const ZipArray = xs => ({
   ap: zipArray => {
     const ys = zipArray.runZipArray;
     const result = new Array(Math.min(xs.length, ys.length));
-    for (let i = 0; i < result.length; ++i) result[i] = xs[i](ys[i]);
+
+    for (let i = 0; i < result.length; ++i) {
+      result[i] = xs[i](ys[i]);
+    }
+
     return ZipArray(result);
   },
   runZipArray: xs,
