@@ -17,20 +17,15 @@ const ZipArray = xs => ({
   toString: () => `ZipArray([${xs}])`,
 });
 
-const ZipArrayStatic = {
-  map: (f, xs) => xs.map(x => f(x)),
-  ap: (fs, xs) => {
-    const result = new Array(Math.min(fs.length, xs.length));
+ZipArray.map = (f, xs) => xs.map(x => f(x));
+ZipArray.ap = (fs, xs) => {
+  const result = new Array(Math.min(fs.length, xs.length));
 
-    for (let i = 0; i < result.length; ++i) {
-      result[i] = fs[i](xs[i]);
-    }
+  for (let i = 0; i < result.length; ++i) {
+    result[i] = fs[i](xs[i]);
+  }
 
-    return result;
-  },
+  return result;
 };
 
-module.exports = {
-  ZipArray: ZipArray,
-  ZipArrayStatic: ZipArrayStatic,
-};
+module.exports = ZipArray;

@@ -3,7 +3,8 @@
 const jsv = require('jsverify');
 const R = require('ramda');
 
-const {ZipArray, ZipArrayStatic: {map, ap}} = require('.');
+const ZipArray = require('.');
+const {map, ap} = ZipArray;
 
 const ZipArrayArb = ty => jsv.array(ty).smap(ZipArray, xs => xs.runZipArray);
 const env = {

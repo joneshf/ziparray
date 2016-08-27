@@ -3,6 +3,7 @@
 Provides an alternative `Apply` implementation for arrays.
 
 ![fantasyland](https://raw.githubusercontent.com/fantasyland/fantasy-land/master/logo.png)
+![static-land](https://raw.githubusercontent.com/rpominov/static-land/master/logo/logo.png)
 
 ## Installation
 
@@ -16,8 +17,10 @@ The common implementation of `Apply` for arrays works with all combinations. How
 
 ## Usage
 
+### Fantasy Land
+
 ```js
-> const ZipArray = require('ziparray');
+> const {ZipArray} = require('ziparray');
 undefined
 > ZipArray([1,2,3])
 ZipArray([1,2,3])
@@ -29,4 +32,21 @@ ZipArray([2,6])
 ZipArray([2,6])
 > ZipArray([x => y => x + y, x => y => x * y]).ap(ZipArray([1,20])).ap(ZipArray([3,40]))
 ZipArray([4,800])
+```
+
+### Static Land
+
+```js
+> const ZipArray = require('.');
+undefined
+> const {map, ap} = ZipArray;
+undefined
+> map(x => x + 10, [1,2,3])
+[ 11, 12, 13 ]
+> ap([x => x + 1, x => x * 3], [1,2,3])
+[ 2, 6 ]
+> ap([x => x + 1, x => x * 3], [1,2])
+[ 2, 6 ]
+> ap(ap([x => y => x + y, x => y => x * y], [1,20]), [3,40])
+[ 4, 800 ]
 ```
