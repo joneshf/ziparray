@@ -20,7 +20,7 @@ The common implementation of `Apply` for arrays works with all combinations. How
 ### Fantasy Land
 
 ```js
-> const {ZipArray} = require('ziparray');
+> const ZipArray = require('ziparray');
 undefined
 > ZipArray([1,2,3])
 ZipArray([1,2,3])
